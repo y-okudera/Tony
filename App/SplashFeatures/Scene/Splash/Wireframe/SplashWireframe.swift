@@ -17,7 +17,9 @@ final class SplashWireframeImpl: SplashWireframe {
     weak var viewController: UIViewController?
 
     func presentSearchRepo(environment: Environment) {
-        let vc = environment.resolve(ViewDescriptor.SearchRepoDescriptor(initialSearchQuery: "Swift"))
-        viewController?.present(vc, animated: true)
+        let searchRepoVC = environment.resolve(ViewDescriptor.SearchRepoDescriptor(initialSearchQuery: "Swift"))
+        let navigationController = UINavigationController(rootViewController: searchRepoVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        viewController?.present(navigationController, animated: true)
     }
 }

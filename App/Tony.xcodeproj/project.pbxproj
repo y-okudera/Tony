@@ -57,12 +57,14 @@
 		B69587BA27DE56FB0011DE08 /* SplashWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69587B927DE56FB0011DE08 /* SplashWireframe.swift */; };
 		B69587BB27DE5A910011DE08 /* TonyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69586E627DD021F0011DE08 /* TonyCore.framework */; };
 		B69587BC27DE5A910011DE08 /* TonyCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B69586E627DD021F0011DE08 /* TonyCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6A65FD327DF7D7200BC5A8D /* URLSession+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A65FD227DF7D7200BC5A8D /* URLSession+.swift */; };
+		B6A65FE027DF8A7100BC5A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A65FDF27DF8A7100BC5A8D /* Main.storyboard */; };
+		B6A65FE227DF8ACA00BC5A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A65FE127DF8ACA00BC5A8D /* LaunchScreen.storyboard */; };
+		B6A65FE527DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A65FE327DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.swift */; };
+		B6A65FE627DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A65FE427DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.xib */; };
 		B6BD677027DBAA470015C526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD676F27DBAA470015C526 /* AppDelegate.swift */; };
 		B6BD677227DBAA470015C526 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD677127DBAA470015C526 /* SceneDelegate.swift */; };
-		B6BD677427DBAA470015C526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD677327DBAA470015C526 /* ViewController.swift */; };
-		B6BD677727DBAA470015C526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD677527DBAA470015C526 /* Main.storyboard */; };
 		B6BD677927DBAA480015C526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BD677827DBAA480015C526 /* Assets.xcassets */; };
-		B6BD677C27DBAA480015C526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD677A27DBAA480015C526 /* LaunchScreen.storyboard */; };
 		B6BD678727DBAA490015C526 /* TonyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD678627DBAA490015C526 /* TonyTests.swift */; };
 		B6BD679127DBAA490015C526 /* TonyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD679027DBAA490015C526 /* TonyUITests.swift */; };
 		B6BD679327DBAA490015C526 /* TonyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD679227DBAA490015C526 /* TonyUITestsLaunchTests.swift */; };
@@ -251,13 +253,15 @@
 		B69587B527DE56E30011DE08 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B69587B727DE56E80011DE08 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		B69587B927DE56FB0011DE08 /* SplashWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWireframe.swift; sourceTree = "<group>"; };
+		B6A65FD227DF7D7200BC5A8D /* URLSession+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
+		B6A65FDF27DF8A7100BC5A8D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B6A65FE127DF8ACA00BC5A8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6A65FE327DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		B6A65FE427DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubRepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		B6BD676C27DBAA470015C526 /* Tony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tony.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BD676F27DBAA470015C526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BD677127DBAA470015C526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6BD677327DBAA470015C526 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6BD677627DBAA470015C526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BD677827DBAA480015C526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B6BD677B27DBAA480015C526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BD677D27DBAA480015C526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6BD678227DBAA490015C526 /* TonyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TonyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BD678627DBAA490015C526 /* TonyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonyTests.swift; sourceTree = "<group>"; };
@@ -379,8 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				B695872627DD06780011DE08 /* Sources */,
-				B69586E827DD021F0011DE08 /* TonyCore.h */,
 				B69586E927DD021F0011DE08 /* TonyCore.docc */,
+				B69586E827DD021F0011DE08 /* TonyCore.h */,
 			);
 			path = TonyCore;
 			sourceTree = "<group>";
@@ -433,8 +437,8 @@
 		B695875227DE06920011DE08 /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
-				B695875427DE07730011DE08 /* SearchRepository */,
 				B695875327DE07630011DE08 /* Common */,
+				B695875427DE07730011DE08 /* SearchRepository */,
 			);
 			path = GitHub;
 			sourceTree = "<group>";
@@ -442,8 +446,8 @@
 		B695875327DE07630011DE08 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B695874E27DE064A0011DE08 /* GitHubUser.swift */,
 				B695875027DE06710011DE08 /* GitHubRepository.swift */,
+				B695874E27DE064A0011DE08 /* GitHubUser.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -460,8 +464,9 @@
 		B695875727DE2AF00011DE08 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B6BD677A27DBAA480015C526 /* LaunchScreen.storyboard */,
 				B6BD676F27DBAA470015C526 /* AppDelegate.swift */,
+				B6A65FE127DF8ACA00BC5A8D /* LaunchScreen.storyboard */,
+				B6A65FDF27DF8A7100BC5A8D /* Main.storyboard */,
 				B6BD677127DBAA470015C526 /* SceneDelegate.swift */,
 			);
 			path = Application;
@@ -525,11 +530,10 @@
 		B695877827DE49430011DE08 /* SearchRepo */ = {
 			isa = PBXGroup;
 			children = (
-				B695877F27DE4DAD0011DE08 /* SearchRepoPresenter.swift */,
-				B695877927DE49510011DE08 /* SearchRepoViewBuilder.swift */,
-				B695877D27DE4D9F0011DE08 /* SearchRepoViewController.storyboard */,
-				B695877B27DE4D9A0011DE08 /* SearchRepoViewController.swift */,
-				B695878127DE4DC20011DE08 /* SearchRepoWireframe.swift */,
+				B6A65FD527DF866000BC5A8D /* Presenter */,
+				B6A65FD827DF868E00BC5A8D /* View */,
+				B6A65FD627DF866D00BC5A8D /* ViewBuilder */,
+				B6A65FD727DF867D00BC5A8D /* Wireframe */,
 			);
 			path = SearchRepo;
 			sourceTree = "<group>";
@@ -561,10 +565,10 @@
 		B695879027DE56630011DE08 /* SplashFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				B69587AD27DE56930011DE08 /* Scene */,
 				B69587AC27DE568C0011DE08 /* Extension */,
-				B695879127DE56630011DE08 /* SplashFeatures.h */,
+				B69587AD27DE56930011DE08 /* Scene */,
 				B695879227DE56630011DE08 /* SplashFeatures.docc */,
+				B695879127DE56630011DE08 /* SplashFeatures.h */,
 			);
 			path = SplashFeatures;
 			sourceTree = "<group>";
@@ -596,13 +600,99 @@
 		B69587B027DE56B50011DE08 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				B69587B327DE56D20011DE08 /* SplashPresenter.swift */,
-				B69587B127DE56C30011DE08 /* SplashViewBuilder.swift */,
-				B69587B727DE56E80011DE08 /* SplashViewController.storyboard */,
-				B69587B527DE56E30011DE08 /* SplashViewController.swift */,
-				B69587B927DE56FB0011DE08 /* SplashWireframe.swift */,
+				B6A65FD927DF879300BC5A8D /* Presenter */,
+				B6A65FDA27DF879D00BC5A8D /* View */,
+				B6A65FDB27DF87AC00BC5A8D /* ViewBuilder */,
+				B6A65FDC27DF87BA00BC5A8D /* Wireframe */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		B6A65FD127DF7D6400BC5A8D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6A65FD227DF7D7200BC5A8D /* URLSession+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6A65FD427DF7DD200BC5A8D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B695875727DE2AF00011DE08 /* Application */,
+				B6A65FD127DF7D6400BC5A8D /* Extension */,
+				B695875827DE2B090011DE08 /* Resources */,
+				B695875A27DE2B5A0011DE08 /* SideEffect */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B6A65FD527DF866000BC5A8D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B695877F27DE4DAD0011DE08 /* SearchRepoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B6A65FD627DF866D00BC5A8D /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B695877927DE49510011DE08 /* SearchRepoViewBuilder.swift */,
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
+		B6A65FD727DF867D00BC5A8D /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				B695878127DE4DC20011DE08 /* SearchRepoWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		B6A65FD827DF868E00BC5A8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6A65FE327DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.swift */,
+				B6A65FE427DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.xib */,
+				B695877D27DE4D9F0011DE08 /* SearchRepoViewController.storyboard */,
+				B695877B27DE4D9A0011DE08 /* SearchRepoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6A65FD927DF879300BC5A8D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B69587B327DE56D20011DE08 /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B6A65FDA27DF879D00BC5A8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B69587B727DE56E80011DE08 /* SplashViewController.storyboard */,
+				B69587B527DE56E30011DE08 /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6A65FDB27DF87AC00BC5A8D /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B69587B127DE56C30011DE08 /* SplashViewBuilder.swift */,
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
+		B6A65FDC27DF87BA00BC5A8D /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				B69587B927DE56FB0011DE08 /* SplashWireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		B6BD676327DBAA470015C526 = {
@@ -642,11 +732,7 @@
 		B6BD676E27DBAA470015C526 /* Tony */ = {
 			isa = PBXGroup;
 			children = (
-				B695875727DE2AF00011DE08 /* Application */,
-				B695875827DE2B090011DE08 /* Resources */,
-				B695875A27DE2B5A0011DE08 /* SideEffect */,
-				B6BD677327DBAA470015C526 /* ViewController.swift */,
-				B6BD677527DBAA470015C526 /* Main.storyboard */,
+				B6A65FD427DF7DD200BC5A8D /* Sources */,
 			);
 			path = Tony;
 			sourceTree = "<group>";
@@ -962,6 +1048,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A65FE627DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.xib in Resources */,
 				B695877E27DE4D9F0011DE08 /* SearchRepoViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -992,9 +1079,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BD677C27DBAA480015C526 /* LaunchScreen.storyboard in Resources */,
+				B6A65FE227DF8ACA00BC5A8D /* LaunchScreen.storyboard in Resources */,
+				B6A65FE027DF8A7100BC5A8D /* Main.storyboard in Resources */,
 				B6BD677927DBAA480015C526 /* Assets.xcassets in Resources */,
-				B6BD677727DBAA470015C526 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,6 +1206,7 @@
 				B695874F27DE064A0011DE08 /* GitHubUser.swift in Sources */,
 				B695875627DE07830011DE08 /* SearchRepositoryRequest.swift in Sources */,
 				B695878227DE4DC20011DE08 /* SearchRepoWireframe.swift in Sources */,
+				B6A65FE527DF9B8A00BC5A8D /* GitHubRepositoryTableViewCell.swift in Sources */,
 				B695877127DE48050011DE08 /* SearchRepositoryResponse.swift in Sources */,
 				B695878927DE55210011DE08 /* Bundle+.swift in Sources */,
 			);
@@ -1158,7 +1246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B695876E27DE444B0011DE08 /* TonyEnvironment.swift in Sources */,
-				B6BD677427DBAA470015C526 /* ViewController.swift in Sources */,
+				B6A65FD327DF7D7200BC5A8D /* URLSession+.swift in Sources */,
 				B6BD677027DBAA470015C526 /* AppDelegate.swift in Sources */,
 				B6BD677227DBAA470015C526 /* SceneDelegate.swift in Sources */,
 				B695876C27DE43F20011DE08 /* APIClientImpl.swift in Sources */,
@@ -1252,25 +1340,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		B6BD677527DBAA470015C526 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6BD677627DBAA470015C526 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B6BD677A27DBAA480015C526 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6BD677B27DBAA480015C526 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		B69586FE27DD021F0011DE08 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1285,6 +1354,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1315,6 +1385,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1381,6 +1452,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1411,6 +1483,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1477,6 +1550,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1507,6 +1581,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1611,7 +1686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1666,7 +1741,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1687,12 +1762,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tony/Resources/Info.plist;
+				INFOPLIST_FILE = Tony/Sources/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1717,12 +1793,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tony/Resources/Info.plist;
+				INFOPLIST_FILE = Tony/Sources/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

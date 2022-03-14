@@ -21,6 +21,9 @@ final class SplashPresenterImpl: SplashPresenter {
     var environment: Environment!
 
     func viewDidAppear() {
-        wireFrame.presentSearchRepo(environment: environment)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            guard let self = self else { return }
+            self.wireFrame.presentSearchRepo(environment: self.environment)
+        }
     }
 }
