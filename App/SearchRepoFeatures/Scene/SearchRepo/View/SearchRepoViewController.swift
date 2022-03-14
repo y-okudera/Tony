@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TonyCore
 
 protocol SearchRepoView: AnyObject {
     func reloadList()
@@ -18,7 +19,7 @@ class SearchRepoViewController: UIViewController {
             newValue.dataSource = self
             newValue.delegate = self
             newValue.register(
-                UINib(nibName: "GitHubRepositoryTableViewCell", bundle: .current),
+                UINib(nibName: "GitHubRepositoryTableViewCell", bundle: .core),
                 forCellReuseIdentifier: "GitHubRepositoryTableViewCell"
             )
         }
@@ -80,7 +81,7 @@ extension SearchRepoViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GitHubRepositoryTableViewCell", for: indexPath) as! GitHubRepositoryTableViewCell
-        cell.nameLabel.text = presenter.items[indexPath.row].fullName
+        cell.configure(title: presenter.items[indexPath.row].fullName)
         return cell
     }
 }
