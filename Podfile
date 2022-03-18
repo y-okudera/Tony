@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 workspace 'Tony'
-project './App/Tony.xcodeproj'
+project './Tony.xcodeproj'
 
 target 'Tony' do
   # Comment the next line if you don't want to use dynamic frameworks

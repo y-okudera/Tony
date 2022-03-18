@@ -39,7 +39,7 @@ public struct GitHubAPIPagination {
         }
 
         let dictionary =
-        linkField
+            linkField
             .components(separatedBy: ",")
             .reduce(into: [String: String]()) {
                 let components = $1.components(separatedBy: "; ")
@@ -56,23 +56,23 @@ public struct GitHubAPIPagination {
             return URL(string: next)
         }()
 
-#if DEBUG
-        let firstUrl: URL? = {
-            guard let first = dictionary["rel=\"first\""] else {
-                return nil
-            }
-            return URL(string: first)
-        }()
-        let lastUrl: URL? = {
-            guard let last = dictionary["rel=\"last\""] else {
-                return nil
-            }
-            return URL(string: last)
-        }()
-        print("nextUrl", nextUrl?.absoluteString ?? "nil")
-        print("firstUrl", firstUrl?.absoluteString ?? "nil")
-        print("lastUrl", lastUrl?.absoluteString ?? "nil")
-#endif
+        #if DEBUG
+            let firstUrl: URL? = {
+                guard let first = dictionary["rel=\"first\""] else {
+                    return nil
+                }
+                return URL(string: first)
+            }()
+            let lastUrl: URL? = {
+                guard let last = dictionary["rel=\"last\""] else {
+                    return nil
+                }
+                return URL(string: last)
+            }()
+            print("nextUrl", nextUrl?.absoluteString ?? "nil")
+            print("firstUrl", firstUrl?.absoluteString ?? "nil")
+            print("lastUrl", lastUrl?.absoluteString ?? "nil")
+        #endif
 
         self = .init(hasNext: nextUrl != nil)
     }

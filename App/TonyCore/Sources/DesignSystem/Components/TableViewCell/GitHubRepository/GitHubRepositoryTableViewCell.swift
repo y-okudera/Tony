@@ -10,7 +10,7 @@ import UIKit
 public final class GitHubRepositoryTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
-    
+
     public override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
