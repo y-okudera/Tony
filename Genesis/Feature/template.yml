@@ -1,0 +1,22 @@
+options:
+  - name: sceneName
+    question: Sandbox scene name?
+    description: new Sandbox scene name to generate. (e.g. RecipeDetails).
+    type: string
+    required: true
+  - name: moduleName
+    question: Destination target?
+    description: module name to generate new sandbox scene for. (e.g. RecipeDetails)
+    type: string
+    required: true
+files:
+  - template: Templates/Presenter/Presenter.swift.stencil
+    path: "{{ moduleName }}/Presenter/{{ sceneName }}Presenter.swift"
+  - template: Templates/View/ViewController.storyboard.stencil
+    path: "{{ moduleName }}/View/{{ sceneName }}ViewController.storyboard"
+  - template: Templates/View/ViewController.swift.stencil
+    path: "{{ moduleName }}/View/{{ sceneName }}ViewController.swift"
+  - template: Templates/ViewBuilder/ViewBuilder.swift.stencil
+    path: "{{ moduleName }}/ViewBuilder/{{ sceneName }}ViewBuilder.swift"
+  - template: Templates/Wireframe/Wireframe.swift.stencil
+    path: "{{ moduleName }}/Wireframe/{{ sceneName }}Wireframe.swift"

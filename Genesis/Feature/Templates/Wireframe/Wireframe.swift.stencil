@@ -1,0 +1,22 @@
+//
+//  {{ sceneName }}Wireframe.swift
+//  {{ moduleName }}
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+
+import TonyCore
+import UIKit
+
+protocol {{ sceneName }}Wireframe: AnyObject {
+    //    func presentFoo(environment: Environment)
+}
+
+final class {{ sceneName }}WireframeImpl: {{ sceneName }}Wireframe {
+    weak var viewController: UIViewController?
+
+    //    func presentFoo(environment: Environment) {
+    //    }
+}

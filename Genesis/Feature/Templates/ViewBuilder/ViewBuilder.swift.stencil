@@ -1,0 +1,29 @@
+//
+//  {{ sceneName }}ViewBuilder.swift
+//  {{ moduleName }}
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+import TonyCore
+import UIKit
+
+public enum {{ sceneName }}ViewBuilder {
+    public static func build(with environment: Environment) -> UIViewController {
+        let storyboard = UIStoryboard.init(name: "{{ sceneName }}ViewController", bundle: .current)
+        let vc = storyboard.instantiateViewController(withIdentifier: "{{ sceneName }}ViewController") as! {{ sceneName }}ViewController
+
+        let wireFrame = {{ sceneName }}WireframeImpl()
+        wireFrame.viewController = vc
+
+        let presenter = {{ sceneName }}PresenterImpl()
+        presenter.environment = environment
+        presenter.view = vc
+        presenter.wireFrame = wireFrame
+
+        vc.presenter = presenter
+
+        return vc
+    }
+}

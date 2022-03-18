@@ -1,0 +1,22 @@
+//
+//  {{ sceneName }}Presenter.swift
+//  {{ moduleName }}
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+import Foundation
+import TonyCore
+
+// MARK: - Interface
+protocol {{ sceneName }}Presenter {
+
+}
+
+// MARK: - Implementation
+final class {{ sceneName }}PresenterImpl: {{ sceneName }}Presenter {
+    weak var view: {{ sceneName }}View?
+    var wireFrame: {{ sceneName }}Wireframe!
+    var environment: Environment!
+}

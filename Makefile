@@ -61,6 +61,11 @@ lint: ## Linting Swift code
 format: ## Reformatting Swift code
 	swift run -c release --package-path ./Tools/Common swift-format -r ./App -i
 
+.PHONY: gen-feature
+gen-feature: ## Generate Swift code
+	chmod +x Scripts/genesis-feature.sh
+	Scripts/genesis-feature.sh
+
 .PHONY: build-cli-tools
 build-cli-tools: ## Build CLI tools managed by SwiftPM
 	swift build -c release --package-path ./Tools/Common --product license-plist
