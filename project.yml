@@ -6,9 +6,6 @@ fileGroups: []
 configs:
   Debug: debug
   Release: release
-# configFiles:
-#   Debug: Configs/Project.Debug.xcconfig
-#   Release: Configs/Project.Release.xcconfig
 options:
   minimumXcodeGenVersion: "2.25.0"
   usesTabs: false
@@ -25,7 +22,6 @@ settingGroups:
     ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     CODE_SIGN_STYLE: Automatic
-    CURRENT_PROJECT_VERSION: 1
     DEVELOPMENT_TEAM: B8PR34D6DP
     GENERATE_INFOPLIST_FILE: YES
     INFOPLIST_FILE: App/Tony/Sources/Resources/Info.plist
@@ -43,6 +39,13 @@ settingGroups:
     SWIFT_EMIT_LOC_STRINGS: YES
     SWIFT_VERSION: 5.0
     TARGETED_DEVICE_FAMILY: "1,2"
+include:
+  - path: XcodeGen/TonyCore.yml
+    relativePaths: false
+  - path: XcodeGen/SplashFeatures.yml
+    relativePaths: false
+  - path: XcodeGen/SearchRepoFeatures.yml
+    relativePaths: false
 
 ####################
 
@@ -52,24 +55,13 @@ targets:
   Tony:
     type: application
     platform: iOS
-    # configFiles:
-    #   Debug: Configs/Project.Debug.xcconfig
-    #   Release: Configs/Project.Release.xcconfig
     settings:
       groups: [applicationSettingGroups]
-      # INFOPLIST_FILE: App/Tony/Sources/Resources/info.plist
-      # INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
-      # INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
-      # INFOPLIST_KEY_UIMainStoryboardFile: Main
-      # INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-      # INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-      # BUNDLE_NAME: 'jp.yuoku.Tony'
     sources:
       - path: App/Tony
         excludes:
           - "**/.gitkeep"
           - "**/*.md"
-      # - path: Configs
     dependencies:
       - target: TonyCore
         codeSign: false
@@ -108,83 +100,6 @@ targets:
       - App/TonyUITests
     dependencies:
       - target: Tony
-####################
-  # TonyCore framework
-  TonyCore:
-    type: framework
-    platform: iOS
-    # configFiles:
-    #   Debug: Configs/Infrastructure.Debug.xcconfig
-    #   Release: Configs/Infrastructure.Release.xcconfig
-    settings:
-      PRODUCT_BUNDLE_IDENTIFIER: framework.TonyCore
-      CODE_SIGN_STYLE: Automatic
-      SWIFT_VERSION: "5.0"
-      INFOPLIST_FILE: App/TonyCore/Sources/Resources/Info.plist
-    scheme: {}
-    sources:
-      - path: App/TonyCore
-        excludes:
-          - "**/.gitkeep"
-          - "**/*.md"
-  # TonyCore のUnitTestターゲット
-  TonyCoreTests:
-    type: bundle.unit-test
-    platform: iOS
-    settings:
-      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
-      BUNDLE_NAME: 'framework.TonyCore.tests'
-      configs:
-        Debug:
-          VALIDATE_WORKSPACE: YES
-    sources:
-      - App/TonyCoreTests
-    dependencies:
-      - target: Tony
-####################
-  # SplashFeatures framework
-  SplashFeatures:
-    type: framework
-    platform: iOS
-    # configFiles:
-    #   Debug: Configs/Domain.Debug.xcconfig
-    #   Release: Configs/Domain.Release.xcconfig
-    settings:
-      PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
-      CODE_SIGN_STYLE: Automatic
-      SWIFT_VERSION: "5.0"
-      INFOPLIST_FILE: App/SplashFeatures/Sources/Resources/Info.plist
-    scheme: {}
-    sources:
-      - path: App/SplashFeatures
-        excludes:
-          - "**/.gitkeep"
-          - "**/*.md"
-    dependencies:
-      - target: TonyCore
-        codeSign: false
-####################
-  # SearchRepoFeatures framework
-  SearchRepoFeatures:
-    type: framework
-    platform: iOS
-    # configFiles:
-    #   Debug: Configs/Domain.Debug.xcconfig
-    #   Release: Configs/Domain.Release.xcconfig
-    settings:
-      PRODUCT_BUNDLE_IDENTIFIER: framework.SearchRepoFeatures
-      CODE_SIGN_STYLE: Automatic
-      SWIFT_VERSION: "5.0"
-      INFOPLIST_FILE: App/SearchRepoFeatures/Sources/Resources/Info.plist
-    scheme: {}
-    sources:
-      - path: App/SearchRepoFeatures
-        excludes:
-          - "**/.gitkeep"
-          - "**/*.md"
-    dependencies:
-      - target: TonyCore
-        codeSign: false
 
 #####################
 
@@ -196,10 +111,6 @@ schemeTemplates:
         Tony: all
         TonyTests: [test]
         TonyUITests: [test]
-        # TonyCore: all
-        TonyCoreTests: [test]
-        # SplashFeatures: all
-        # SearchRepoFeatures: all
     run:
       config: ${debugConfig}
     test:
@@ -207,7 +118,6 @@ schemeTemplates:
       targets:
         - TonyTests
         - TonyUITests
-        - TonyCoreTests
     profile:
       config: ${releaseConfig}
     analyze:

@@ -1,0 +1,56 @@
+targets:
+  SplashFeatures:
+    type: framework
+    platform: iOS
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
+      CODE_SIGN_STYLE: Automatic
+      SWIFT_VERSION: "5.0"
+      INFOPLIST_FILE: App/SplashFeatures/Sources/Resources/Info.plist
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+    sources:
+      - path: App/SplashFeatures
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: TonyCore
+        codeSign: false
+  SplashFeaturesTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      configs:
+        Debug:
+          VALIDATE_WORKSPACE: YES
+    sources:
+      - path: App/SplashFeaturesTests
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: SplashFeatures
+schemeTemplates:
+  SplashFeaturesScheme:
+    build:
+      targets:
+        SplashFeatures: all
+        SplashFeaturesTests: [test]
+    run:
+      config: ${debugConfig}
+    test:
+      config: ${debugConfig}
+      targets:
+        - SplashFeaturesTests
+    profile:
+      config: ${releaseConfig}
+    analyze:
+      config: ${debugConfig}
+    archive:
+      config: ${releaseConfig}
+schemes:
+  SplashFeatures:
+    templates: [SplashFeaturesScheme]
+    templateAttributes:
+      debugConfig: Debug
+      releaseConfig: Release

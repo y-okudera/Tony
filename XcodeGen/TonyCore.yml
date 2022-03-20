@@ -1,0 +1,53 @@
+targets:
+  TonyCore:
+    type: framework
+    platform: iOS
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: framework.TonyCore
+      CODE_SIGN_STYLE: Automatic
+      SWIFT_VERSION: "5.0"
+      INFOPLIST_FILE: App/TonyCore/Sources/Resources/Info.plist
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+    sources:
+      - path: App/TonyCore
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+  TonyCoreTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      configs:
+        Debug:
+          VALIDATE_WORKSPACE: YES
+    sources:
+      - path: App/TonyCoreTests
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: TonyCore
+schemeTemplates:
+  TonyCoreScheme:
+    build:
+      targets:
+        TonyCore: all
+        TonyCoreTests: [test]
+    run:
+      config: ${debugConfig}
+    test:
+      config: ${debugConfig}
+      targets:
+        - TonyCoreTests
+    profile:
+      config: ${releaseConfig}
+    analyze:
+      config: ${debugConfig}
+    archive:
+      config: ${releaseConfig}
+schemes:
+  TonyCore:
+    templates: [TonyCoreScheme]
+    templateAttributes:
+      debugConfig: Debug
+      releaseConfig: Release
