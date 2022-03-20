@@ -1,6 +1,5 @@
 # https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md
 
-# プロジェクト全体の設定
 name: Tony
 fileGroups: []
 configs:
@@ -17,7 +16,7 @@ options:
 attributes:
   ORGANIZATIONNAME: "yuoku"
 settingGroups:
-  applicationSettingGroups:
+  applicationSetting:
     ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
     ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
@@ -47,16 +46,12 @@ include:
   - path: XcodeGen/SearchRepoFeatures.yml
     relativePaths: false
 
-####################
-
-# ビルドターゲット
 targets:
-  # application
   Tony:
     type: application
     platform: iOS
     settings:
-      groups: [applicationSettingGroups]
+      groups: [applicationSetting]
     sources:
       - path: App/Tony
         excludes:
@@ -72,7 +67,7 @@ targets:
     postCompileScripts:
       - path: ./Scripts/swift-format.sh
         name: swift-format
-  # application のUnitTestターゲット
+
   TonyTests:
     type: bundle.unit-test
     platform: iOS
@@ -86,7 +81,7 @@ targets:
       - App/TonyTests
     dependencies:
       - target: Tony
-  # application のUITestターゲット
+
   TonyUITests:
     type: bundle.ui-testing
     platform: iOS
@@ -101,9 +96,6 @@ targets:
     dependencies:
       - target: Tony
 
-#####################
-
-# スキーム定義
 schemeTemplates:
   TonyScheme:
     build:

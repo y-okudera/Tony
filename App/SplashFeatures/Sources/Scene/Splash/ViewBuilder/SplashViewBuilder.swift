@@ -11,7 +11,7 @@ import UIKit
 
 public enum SplashViewBuilder {
     public static func build(environment: Environment) -> UIViewController {
-        let storyboard = UIStoryboard.init(name: "SplashViewController", bundle: .current)
+        let storyboard = UIStoryboard(name: "SplashViewController", bundle: .current)
         let vc = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
 
         let wireFrame = SplashWireframeImpl()

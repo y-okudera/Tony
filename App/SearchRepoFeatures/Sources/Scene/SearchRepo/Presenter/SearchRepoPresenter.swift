@@ -48,6 +48,7 @@ final class SearchRepoPresenterImpl: SearchRepoPresenter {
             } catch {
                 print(error)
                 isLoading = false
+                #warning("Show error dialog.")
             }
         }
     }
@@ -76,6 +77,7 @@ final class SearchRepoPresenterImpl: SearchRepoPresenter {
                 print(error)
                 page -= 1
                 isLoading = false
+                #warning("Show error dialog.")
             }
         }
     }

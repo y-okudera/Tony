@@ -62,9 +62,14 @@ format: ## Reformatting Swift code
 	swift run -c release --package-path ./Tools/Common swift-format -r ./App -i
 
 .PHONY: gen-feature
-gen-feature: ## Generate Swift code
+gen-feature: ## Generate Swift code for feature module
 	chmod +x Scripts/genesis-feature.sh
 	Scripts/genesis-feature.sh
+
+.PHONY: gen-sandbox
+gen-sandbox: ## Generate sandbox app
+	chmod +x Scripts/genesis-sandbox.sh
+	Scripts/genesis-sandbox.sh
 
 .PHONY: build-cli-tools
 build-cli-tools: ## Build CLI tools managed by SwiftPM

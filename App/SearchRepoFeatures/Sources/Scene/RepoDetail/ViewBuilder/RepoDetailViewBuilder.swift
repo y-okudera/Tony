@@ -10,7 +10,7 @@ import UIKit
 
 public enum RepoDetailViewBuilder {
     public static func build(with environment: Environment) -> UIViewController {
-        let storyboard = UIStoryboard.init(name: "RepoDetailViewController", bundle: .current)
+        let storyboard = UIStoryboard(name: "RepoDetailViewController", bundle: .current)
         let vc = storyboard.instantiateViewController(withIdentifier: "RepoDetailViewController") as! RepoDetailViewController
 
         let wireFrame = RepoDetailWireframeImpl()

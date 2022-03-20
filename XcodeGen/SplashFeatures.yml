@@ -1,13 +1,18 @@
+settingGroups:
+  splashFeaturesFrameworkSetting:
+    PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    INFOPLIST_FILE: App/SplashFeatures/Sources/Resources/Info.plist
+    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+  splashFeaturesTestsSetting:
+    VALIDATE_WORKSPACE: YES
 targets:
   SplashFeatures:
     type: framework
     platform: iOS
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
-      CODE_SIGN_STYLE: Automatic
-      SWIFT_VERSION: "5.0"
-      INFOPLIST_FILE: App/SplashFeatures/Sources/Resources/Info.plist
-      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+      groups: [splashFeaturesFrameworkSetting]
     sources:
       - path: App/SplashFeatures
         excludes:
@@ -20,9 +25,7 @@ targets:
     type: bundle.unit-test
     platform: iOS
     settings:
-      configs:
-        Debug:
-          VALIDATE_WORKSPACE: YES
+      groups: [splashFeaturesTestsSetting]
     sources:
       - path: App/SplashFeaturesTests
         excludes:

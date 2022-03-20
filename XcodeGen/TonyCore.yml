@@ -1,13 +1,18 @@
+settingGroups:
+  tonyCoreFrameworkSetting:
+    PRODUCT_BUNDLE_IDENTIFIER: framework.TonyCore
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    INFOPLIST_FILE: App/TonyCore/Sources/Resources/Info.plist
+    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+  tonyCoreTestsSetting:
+    VALIDATE_WORKSPACE: YES
 targets:
   TonyCore:
     type: framework
     platform: iOS
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: framework.TonyCore
-      CODE_SIGN_STYLE: Automatic
-      SWIFT_VERSION: "5.0"
-      INFOPLIST_FILE: App/TonyCore/Sources/Resources/Info.plist
-      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+      groups: [tonyCoreFrameworkSetting]
     sources:
       - path: App/TonyCore
         excludes:
@@ -17,9 +22,7 @@ targets:
     type: bundle.unit-test
     platform: iOS
     settings:
-      configs:
-        Debug:
-          VALIDATE_WORKSPACE: YES
+      groups: [tonyCoreTestsSetting]
     sources:
       - path: App/TonyCoreTests
         excludes:

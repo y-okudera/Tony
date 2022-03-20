@@ -10,8 +10,11 @@ import TonyCore
 import UIKit
 
 public enum SearchRepoViewBuilder {
+
+    #warning("initialSearchQueryを遷移元から受け取る必要はないが、モジュール間の画面遷移のパラメータ渡しのサンプルとして実装")
+
     public static func build(with descriptor: ViewDescriptor.SearchRepoDescriptor, environment: Environment) -> UIViewController {
-        let storyboard = UIStoryboard.init(name: "SearchRepoViewController", bundle: .current)
+        let storyboard = UIStoryboard(name: "SearchRepoViewController", bundle: .current)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchRepoViewController") as! SearchRepoViewController
         vc.initialSearchQuery = descriptor.initialSearchQuery
 
