@@ -10,13 +10,19 @@ import TonyCore
 import UIKit
 
 protocol SplashWireframe: AnyObject {
-    func presentSearchRepo(environment: Environment)
+    var environment: Environment { get }
+    func presentSearchRepo()
 }
 
 final class SplashWireframeImpl: SplashWireframe {
     weak var viewController: UIViewController?
+    let environment: Environment
 
-    func presentSearchRepo(environment: Environment) {
+    init(environment: Environment) {
+        self.environment = environment
+    }
+
+    func presentSearchRepo() {
         let searchRepoVC = environment.resolve(ViewDescriptor.SearchRepoDescriptor(initialSearchQuery: "Swift"))
         let navigationController = UINavigationController(rootViewController: searchRepoVC)
         navigationController.modalPresentationStyle = .fullScreen

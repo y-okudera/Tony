@@ -14,11 +14,10 @@ public enum SplashViewBuilder {
         let storyboard = UIStoryboard(name: "SplashViewController", bundle: .current)
         let vc = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
 
-        let wireFrame = SplashWireframeImpl()
+        let wireFrame = SplashWireframeImpl(environment: environment)
         wireFrame.viewController = vc
 
         let presenter = SplashPresenterImpl()
-        presenter.environment = environment
         presenter.view = vc
         presenter.wireFrame = wireFrame
 
