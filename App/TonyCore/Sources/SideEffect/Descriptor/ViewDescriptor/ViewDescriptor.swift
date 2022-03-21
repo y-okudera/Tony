@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-public protocol TypedDescriptor {
-    associatedtype Output: UIViewController
-}
-
 public enum ViewDescriptor {
     public struct SearchRepoDescriptor: TypedDescriptor {
         public typealias Output = UIViewController

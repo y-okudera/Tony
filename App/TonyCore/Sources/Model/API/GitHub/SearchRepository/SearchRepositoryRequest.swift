@@ -1,6 +1,6 @@
 //
 //  SearchRepositoryRequest.swift
-//  SearchRepoFeatures
+//  TonyCore
 //
 //  Created by Yuki Okudera on 2022/03/13.
 //
@@ -8,22 +8,22 @@
 import Foundation
 import TonyCore
 
-struct SearchRepositoryRequest: APIRequestable {
-    typealias Response = SearchRepositoryResponse
+public struct SearchRepositoryRequest: APIRequestable {
+    public typealias Response = SearchRepositoryResponse
 
     private let searchQuery: String
     private let page: Int
 
-    init(searchQuery: String, page: Int = 1) {
+    public init(searchQuery: String, page: Int = 1) {
         self.searchQuery = searchQuery
         self.page = page
     }
 
-    var path: String {
+    public var path: String {
         return "/search/repositories"
     }
 
-    var method: String {
+    public var method: String {
         return "GET"
     }
 
