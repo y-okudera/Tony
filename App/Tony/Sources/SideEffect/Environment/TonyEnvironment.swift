@@ -17,6 +17,8 @@ final class TonyEnvironment: Environment {
         switch descriptor {
         case let d as ViewDescriptor.SearchRepoDescriptor:
             return SearchRepoViewBuilder.build(with: d, environment: self) as! Descriptor.Output
+        case _ as UseCaseDescriptor.SearchGitHubRepoUseCaseDescriptor:
+            return SearchGitHubRepoUseCaseImpl(environment: self) as! Descriptor.Output
         default:
             fatalError("unknown descriptor.")
         }

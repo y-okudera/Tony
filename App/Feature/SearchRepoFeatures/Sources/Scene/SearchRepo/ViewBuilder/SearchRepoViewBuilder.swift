@@ -22,7 +22,7 @@ public enum SearchRepoViewBuilder {
         wireFrame.viewController = vc
 
         let presenter = SearchRepoPresenterImpl()
-        presenter.environment = environment
+        presenter.searchGitHubRepoUseCase = environment.resolve(UseCaseDescriptor.SearchGitHubRepoUseCaseDescriptor())
         presenter.view = vc
         presenter.wireFrame = wireFrame
 

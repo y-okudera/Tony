@@ -20,7 +20,7 @@ final class SearchRepoPresenterImpl: SearchRepoPresenter {
 
     weak var view: SearchRepoView?
     var wireFrame: SearchRepoWireframe!
-    var environment: Environment!
+    var searchGitHubRepoUseCase: SearchGitHubRepoUseCase!
 
     var items: [GitHubRepository] = []
     var isLoading: Bool = false
@@ -37,7 +37,7 @@ final class SearchRepoPresenterImpl: SearchRepoPresenter {
         print("初回読み込み！")
         Task {
             do {
-                let result = try await environment.apiClient.sendRequest(SearchRepositoryRequest(searchQuery: searchQuery, page: page))
+                let result = try await searchGitHubRepoUseCase.execute(searchQuery: searchQuery, page: page)
                 print("statusCode", result.statusCode)
                 items = result.response.items
 
@@ -65,7 +65,7 @@ final class SearchRepoPresenterImpl: SearchRepoPresenter {
         print("追加読み込み！ page:", page)
         Task {
             do {
-                let result = try await environment.apiClient.sendRequest(SearchRepositoryRequest(searchQuery: searchQuery, page: page))
+                let result = try await searchGitHubRepoUseCase.execute(searchQuery: searchQuery, page: page)
                 print("statusCode", result.statusCode)
                 items.append(contentsOf: result.response.items)
 

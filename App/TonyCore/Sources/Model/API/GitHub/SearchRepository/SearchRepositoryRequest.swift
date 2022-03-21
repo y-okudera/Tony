@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import TonyCore
 
 public struct SearchRepositoryRequest: APIRequestable {
     public typealias Response = SearchRepositoryResponse
