@@ -19,7 +19,7 @@ class SearchRepoViewController: UIViewController {
             newValue.dataSource = self
             newValue.delegate = self
             newValue.register(
-                UINib(nibName: "GitHubRepositoryTableViewCell", bundle: .core),
+                UINib(nibName: "GitHubRepositoryTableViewCell", bundle: .current),
                 forCellReuseIdentifier: "GitHubRepositoryTableViewCell"
             )
         }

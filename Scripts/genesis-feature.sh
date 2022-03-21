@@ -12,7 +12,7 @@ read -p "new feature scene name to generate. (e.g. SearchRepo): " sceneName
 read -p "module name to generate new feature scene for. (e.g. SearchRepoFeatures): " moduleName
 
 # モジュールの存在確認
-destination="${PWD}/App/$moduleName/Sources/Scene"
+destination="${PWD}/App/Feature/$moduleName/Sources/Scene"
 if [ -d "$destination" ]; then
     swift run -c release --package-path ./Tools/GenesisTool genesis generate Genesis/Feature/template.yml\
     -d "$destination"\

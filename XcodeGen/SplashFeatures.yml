@@ -3,7 +3,7 @@ settingGroups:
     PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
-    INFOPLIST_FILE: App/SplashFeatures/Sources/Resources/Info.plist
+    INFOPLIST_FILE: App/Feature/SplashFeatures/Sources/Resources/Info.plist
     ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
   splashFeaturesTestsSetting:
     VALIDATE_WORKSPACE: YES
@@ -14,7 +14,7 @@ targets:
     settings:
       groups: [splashFeaturesFrameworkSetting]
     sources:
-      - path: App/SplashFeatures
+      - path: App/Feature/SplashFeatures
         excludes:
           - "**/.gitkeep"
           - "**/*.md"
@@ -27,7 +27,7 @@ targets:
     settings:
       groups: [splashFeaturesTestsSetting]
     sources:
-      - path: App/SplashFeaturesTests
+      - path: App/Feature/SplashFeaturesTests
         excludes:
           - "**/.gitkeep"
           - "**/*.md"

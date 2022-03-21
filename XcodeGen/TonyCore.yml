@@ -5,8 +5,6 @@ settingGroups:
     SWIFT_VERSION: "5.0"
     INFOPLIST_FILE: App/TonyCore/Sources/Resources/Info.plist
     ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
-  tonyCoreTestsSetting:
-    VALIDATE_WORKSPACE: YES
 targets:
   TonyCore:
     type: framework
@@ -18,30 +16,15 @@ targets:
         excludes:
           - "**/.gitkeep"
           - "**/*.md"
-  TonyCoreTests:
-    type: bundle.unit-test
-    platform: iOS
-    settings:
-      groups: [tonyCoreTestsSetting]
-    sources:
-      - path: App/TonyCoreTests
-        excludes:
-          - "**/.gitkeep"
-          - "**/*.md"
-    dependencies:
-      - target: TonyCore
 schemeTemplates:
   TonyCoreScheme:
     build:
       targets:
         TonyCore: all
-        TonyCoreTests: [test]
     run:
       config: ${debugConfig}
     test:
       config: ${debugConfig}
-      targets:
-        - TonyCoreTests
     profile:
       config: ${releaseConfig}
     analyze:

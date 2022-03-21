@@ -14,7 +14,7 @@ read -p "sandbox initial scene name. (e.g. SearchRepo): " sceneName
 sandboxName="${featureName}Sandbox"
 
 # サンドボックスアプリの存在確認
-destination="${PWD}/App/${sandboxName}/Sources"
+destination="${PWD}/App/Sandbox/${sandboxName}/Sources"
 
 echo "dest ${destination}"
 
@@ -27,7 +27,7 @@ else
     -d "$destination"\
     -o "featureName: $featureName, sceneName: $sceneName, date: $today, year: $current_year, developerName: $developer_name, developerCompany: $developer_company"
 
-    cp -r ./Genesis/Sandbox/Templates/Resources ./App/${sandboxName}/Sources/Resources
+    cp -r ./Genesis/Sandbox/Templates/Resources ./App/Sandbox/${sandboxName}/Sources/Resources
 
     echo "サンドボックスアプリを生成しました\n${destination}"
 fi
