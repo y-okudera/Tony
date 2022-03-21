@@ -1,9 +1,9 @@
 //
 //  APIClientStub.swift
-//  SearchRepoFeatures
+//  SandboxCore
 //
-//  Created by Yuki Okudera on 2022/03/21.
-//  Copyright © 2022 Yuki Okudera. All rights reserved.
+//  Created by Yuki Okudera on 2022/03/22.
+//  Copyright © 2022 yuoku. All rights reserved.
 //
 
 import TonyCore

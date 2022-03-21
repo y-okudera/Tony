@@ -41,6 +41,8 @@ settingGroups:
 include:
   - path: XcodeGen/TonyCore.yml
     relativePaths: false
+  - path: XcodeGen/SandboxCore.yml
+    relativePaths: false
   - path: XcodeGen/SplashFeatures.yml
     relativePaths: false
   - path: XcodeGen/SearchRepoFeatures.yml

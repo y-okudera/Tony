@@ -1,4 +1,6 @@
 include:
+  - path: ./SandboxCore.yml
+    relativePaths: false
   - path: ./TonyCore.yml
     relativePaths: false
 settingGroups:
@@ -43,7 +45,7 @@ targets:
           - "**/.gitkeep"
           - "**/*.md"
     dependencies:
-      - target: TonyCore
+      - target: SandboxCore
         codeSign: false
       - target: SearchRepoFeatures
         codeSign: false

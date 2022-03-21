@@ -1,0 +1,62 @@
+include:
+  - path: ./TonyCore.yml
+    relativePaths: false
+settingGroups:
+  sandboxCoreFrameworkSetting:
+    PRODUCT_BUNDLE_IDENTIFIER: framework.SandboxCore
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    INFOPLIST_FILE: App/SandboxCore/Sources/Resources/Info.plist
+    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+  sandboxCoreTestsSetting:
+    VALIDATE_WORKSPACE: YES
+targets:
+  SandboxCore:
+    type: framework
+    platform: iOS
+    settings:
+      groups: [sandboxCoreFrameworkSetting]
+    sources:
+      - path: App/SandboxCore
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: TonyCore
+        codeSign: false
+  SandboxCoreTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      groups: [sandboxCoreTestsSetting]
+    sources:
+      - path: App/SandboxCoreTests
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: SandboxCore
+schemeTemplates:
+  SandboxCoreScheme:
+    build:
+      targets:
+        SandboxCore: all
+        SandboxCoreTests: [test]
+    run:
+      config: ${debugConfig}
+    test:
+      config: ${debugConfig}
+      targets:
+        - SandboxCoreTests
+    profile:
+      config: ${releaseConfig}
+    analyze:
+      config: ${debugConfig}
+    archive:
+      config: ${releaseConfig}
+schemes:
+  SandboxCore:
+    templates: [SandboxCoreScheme]
+    templateAttributes:
+      debugConfig: Debug
+      releaseConfig: Release

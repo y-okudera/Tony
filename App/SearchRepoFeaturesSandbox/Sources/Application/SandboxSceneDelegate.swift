@@ -6,8 +6,8 @@
 //  Copyright © 2022 Yuki Okudera. All rights reserved.
 //
 
+import SandboxCore
 import SearchRepoFeatures
-import TonyCore
 import UIKit
 
 class SandboxSceneDelegate: UIResponder, UIWindowSceneDelegate {
