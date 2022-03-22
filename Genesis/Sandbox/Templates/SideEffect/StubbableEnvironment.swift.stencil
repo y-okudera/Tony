@@ -1,0 +1,26 @@
+//
+//  StubbableEnvironment.swift
+//  {{ featureName }}
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+import {{ featureName }}
+import TonyCore
+
+final class StubbableEnvironment: Environment {
+
+    var apiClient: APIClient {
+        APIClientStub.shared
+    }
+
+    func resolve<Descriptor: TypedDescriptor>(_ descriptor: Descriptor) -> Descriptor.Output {
+        switch descriptor {
+        case let d as ViewDescriptor.SearchRepoDescriptor:
+            return SearchRepoViewBuilder.build(with: d, environment: self) as! Descriptor.Output
+        default:
+            fatalError("unknown descriptor.")
+        }
+    }
+}

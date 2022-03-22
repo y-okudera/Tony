@@ -1,0 +1,28 @@
+//
+//  SandboxSceneDelegate.swift
+//  {{ featureName }}Sandbox
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+import {{ featureName }}
+import SandboxCore
+import UIKit
+
+class SandboxSceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    private let environment = StubbableEnvironment()
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = (scene as? UIWindowScene) else {
+            return
+        }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        window.makeKeyAndVisible()
+        let rootViewController = {{ sceneName }}ViewBuilder.build(environment: environment)
+        window.rootViewController = UINavigationController(rootViewController: rootViewController)
+    }
+}

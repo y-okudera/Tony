@@ -1,0 +1,100 @@
+include:
+  - path: ./SandboxCore.yml
+    relativePaths: false
+  - path: ./TonyCore.yml
+    relativePaths: false
+settingGroups:
+  searchRepoFeaturesSandboxSetting:
+    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: B8PR34D6DP
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+    INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
+    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    IPHONEOS_DEPLOYMENT_TARGET: 14.0
+    LD_RUNPATH_SEARCH_PATHS: ("$(inherited)","@executable_path/Frameworks")
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    PRODUCT_NAME: "$(TARGET_NAME)"
+    SWIFT_EMIT_LOC_STRINGS: YES
+    SWIFT_VERSION: 5.0
+    TARGETED_DEVICE_FAMILY: "1,2"
+    INFOPLIST_FILE: App/Sandbox/SearchRepoFeaturesSandbox/Sources/Resources/Info.plist
+    PRODUCT_BUNDLE_IDENTIFIER: jp.yuoku.SearchRepoFeatures.sandbox
+  searchRepoFeaturesFrameworkSetting:
+    PRODUCT_BUNDLE_IDENTIFIER: framework.SearchRepoFeatures
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    INFOPLIST_FILE: App/Feature/SearchRepoFeatures/Sources/Resources/Info.plist
+    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+  searchRepoFeaturesTestsSetting:
+    VALIDATE_WORKSPACE: YES
+targets:
+  SearchRepoFeaturesSandbox:
+    type: application
+    platform: iOS
+    settings:
+      groups: [searchRepoFeaturesSandboxSetting]
+    sources:
+      - path: App/Sandbox/SearchRepoFeaturesSandbox
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: SandboxCore
+        codeSign: false
+      - target: SearchRepoFeatures
+        codeSign: false
+  SearchRepoFeatures:
+    type: framework
+    platform: iOS
+    settings:
+      groups: [searchRepoFeaturesFrameworkSetting]
+    sources:
+      - path: App/Feature/SearchRepoFeatures
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: TonyCore
+        codeSign: false
+  SearchRepoFeaturesTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      groups: [searchRepoFeaturesTestsSetting]
+    sources:
+      - path: App/Feature/SearchRepoFeaturesTests
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+    dependencies:
+      - target: SearchRepoFeatures
+schemeTemplates:
+  SearchRepoFeaturesScheme:
+    build:
+      targets:
+        SearchRepoFeatures: all
+        SearchRepoFeaturesTests: [test]
+    run:
+      config: ${debugConfig}
+    test:
+      config: ${debugConfig}
+      targets:
+        - SearchRepoFeaturesTests
+    profile:
+      config: ${releaseConfig}
+    analyze:
+      config: ${debugConfig}
+    archive:
+      config: ${releaseConfig}
+schemes:
+  SearchRepoFeatures:
+    templates: [SearchRepoFeaturesScheme]
+    templateAttributes:
+      debugConfig: Debug
+      releaseConfig: Release

@@ -1,0 +1,11 @@
+files:
+  - template: Templates/Application/AppDelegate.swift.stencil
+    path: "Application/SandboxAppDelegate.swift"
+  - template: Templates/Application/LaunchScreen.storyboard.stencil
+    path: "Application/LaunchScreen.storyboard"
+  - template: Templates/Application/SceneDelegate.swift.stencil
+    path: "Application/SandboxSceneDelegate.swift"
+  - template: Templates/SideEffect/APIClientStub.swift.stencil
+    path: "SideEffect/APIClientStub.swift"
+  - template: Templates/SideEffect/StubbableEnvironment.swift.stencil
+    path: "SideEffect/StubbableEnvironment.swift"

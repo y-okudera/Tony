@@ -1,0 +1,31 @@
+//
+//  {{ sceneName }}ViewController.swift
+//  {{ moduleName }}
+//
+//  Created by {{ developerName }} on {{ date }}.
+//  Copyright © {{ year }} {{ developerCompany }}. All rights reserved.
+//
+
+import UIKit
+
+// MARK: - Interface
+protocol {{ sceneName }}View: AnyObject {
+    var presenter: {{ sceneName }}Presenter! { get }
+}
+
+// MARK: - Implementation
+final class {{ sceneName }}ViewController: UIViewController {
+
+    // MARK: - Properties
+    var presenter: {{ sceneName }}Presenter!
+
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+// MARK: - {{ sceneName }}View
+extension {{ sceneName }}ViewController: {{ sceneName }}View {
+
+}
