@@ -20,7 +20,6 @@ targets:
           - "**/*.md"
     dependencies:
       - target: TonyCore
-        codeSign: false
   SplashFeaturesTests:
     type: bundle.unit-test
     platform: iOS

@@ -21,7 +21,6 @@ targets:
           - "**/*.md"
     dependencies:
       - target: TonyCore
-        codeSign: false
 schemeTemplates:
   SandboxCoreScheme:
     build:
