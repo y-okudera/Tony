@@ -22,6 +22,7 @@ template-flux-%: ## Generate swift flux files from template. Use specific module
 
 .PHONY: project
 project: ## Generate project
+	make swiftgen
 	make xcodegen
 	bundle exec pod install
 

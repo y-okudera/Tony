@@ -5,37 +5,55 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GitHubRepositoryTableViewCell" customModule="SearchRepoFeatures">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="GitHubRepositoryTableViewCell" customModule="SearchRepoFeatures">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-cE-Lna">
-                        <rect key="frame" x="16" y="16" width="288" height="12"/>
+                        <rect key="frame" x="16" y="16" width="255" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_off" translatesAutoresizingMaskIntoConstraints="NO" id="U37-5R-qyN">
+                        <rect key="frame" x="279" y="20.5" width="25" height="25"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="bSV-Hm-vWe"/>
+                            <constraint firstAttribute="width" constant="25" id="w7w-8f-1dC"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ub8-cE-Lna" secondAttribute="bottom" constant="16" id="PaZ-5z-va5"/>
-                    <constraint firstAttribute="trailing" secondItem="ub8-cE-Lna" secondAttribute="trailing" constant="16" id="cap-dX-AWk"/>
+                    <constraint firstAttribute="trailing" secondItem="U37-5R-qyN" secondAttribute="trailing" constant="16" id="PjC-aW-zG7"/>
+                    <constraint firstItem="U37-5R-qyN" firstAttribute="centerY" secondItem="ub8-cE-Lna" secondAttribute="centerY" id="TzI-ma-PyQ"/>
                     <constraint firstItem="ub8-cE-Lna" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rNs-xP-UEi"/>
                     <constraint firstItem="ub8-cE-Lna" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vsE-01-kOn"/>
+                    <constraint firstItem="U37-5R-qyN" firstAttribute="leading" secondItem="ub8-cE-Lna" secondAttribute="trailing" constant="8" id="x8X-cX-2xA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="heartImageView" destination="U37-5R-qyN" id="aPs-gZ-fkG"/>
                 <outlet property="nameLabel" destination="ub8-cE-Lna" id="72c-AF-5bW"/>
             </connections>
-            <point key="canvasLocation" x="139" y="62"/>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart_off" width="50" height="50"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

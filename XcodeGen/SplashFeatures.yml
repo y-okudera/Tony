@@ -1,3 +1,6 @@
+include:
+  - path: ./SharedResource.yml
+    relativePaths: false
 settingGroups:
   splashFeaturesFrameworkSetting:
     PRODUCT_BUNDLE_IDENTIFIER: framework.SplashFeatures
@@ -14,12 +17,14 @@ targets:
     settings:
       groups: [splashFeaturesFrameworkSetting]
     sources:
+      - path: App/SharedResource/Assets.xcassets
       - path: App/Feature/SplashFeatures
         excludes:
           - "**/.gitkeep"
           - "**/*.md"
     dependencies:
       - target: TonyCore
+      - target: SharedResource
   SplashFeaturesTests:
     type: bundle.unit-test
     platform: iOS

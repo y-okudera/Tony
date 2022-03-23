@@ -43,6 +43,8 @@ include:
     relativePaths: false
   - path: XcodeGen/SandboxCore.yml
     relativePaths: false
+  - path: XcodeGen/SharedResource.yml
+    relativePaths: false
   - path: XcodeGen/SplashFeatures.yml
     relativePaths: false
   - path: XcodeGen/SearchRepoFeatures.yml
@@ -61,6 +63,7 @@ targets:
           - "**/*.md"
     dependencies:
       - target: TonyCore
+      - target: SharedResource
       - target: SplashFeatures
       - target: SearchRepoFeatures
     postCompileScripts:

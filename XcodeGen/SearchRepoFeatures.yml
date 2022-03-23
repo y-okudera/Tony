@@ -3,6 +3,8 @@ include:
     relativePaths: false
   - path: ./TonyCore.yml
     relativePaths: false
+  - path: ./SharedResource.yml
+    relativePaths: false
 settingGroups:
   searchRepoFeaturesSandboxSetting:
     ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
@@ -46,6 +48,7 @@ targets:
           - "**/*.md"
     dependencies:
       - target: SandboxCore
+      - target: SharedResource
       - target: SearchRepoFeatures
   SearchRepoFeatures:
     type: framework
@@ -53,12 +56,14 @@ targets:
     settings:
       groups: [searchRepoFeaturesFrameworkSetting]
     sources:
+      - path: App/SharedResource/Assets.xcassets
       - path: App/Feature/SearchRepoFeatures
         excludes:
           - "**/.gitkeep"
           - "**/*.md"
     dependencies:
       - target: TonyCore
+      - target: SharedResource
   SearchRepoFeaturesTests:
     type: bundle.unit-test
     platform: iOS

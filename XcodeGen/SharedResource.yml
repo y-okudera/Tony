@@ -1,0 +1,38 @@
+settingGroups:
+  sharedResourceFrameworkSetting:
+    PRODUCT_BUNDLE_IDENTIFIER: framework.SharedResource
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    INFOPLIST_FILE: App/SharedResource/Info.plist
+targets:
+  SharedResource:
+    type: framework
+    platform: iOS
+    settings:
+      groups: [sharedResourceFrameworkSetting]
+    sources:
+      - path: App/SharedResource
+        excludes:
+          - "**/.gitkeep"
+          - "**/*.md"
+schemeTemplates:
+  SharedResourceScheme:
+    build:
+      targets:
+        SharedResource: all
+    run:
+      config: ${debugConfig}
+    test:
+      config: ${debugConfig}
+    profile:
+      config: ${releaseConfig}
+    analyze:
+      config: ${debugConfig}
+    archive:
+      config: ${releaseConfig}
+schemes:
+  SharedResource:
+    templates: [SharedResourceScheme]
+    templateAttributes:
+      debugConfig: Debug
+      releaseConfig: Release
