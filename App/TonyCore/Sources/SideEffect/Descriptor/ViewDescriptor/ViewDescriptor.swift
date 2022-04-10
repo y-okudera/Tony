@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 
 public enum ViewDescriptor {
+
+    public struct SplashDescriptor: TypedDescriptor {
+        public typealias Output = UIViewController
+        public init() {
+        }
+    }
+
     public struct SearchRepoDescriptor: TypedDescriptor {
         public typealias Output = UIViewController
         public var initialSearchQuery: String

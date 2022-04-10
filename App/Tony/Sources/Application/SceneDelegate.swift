@@ -6,10 +6,12 @@
 //
 
 import SplashFeatures
+import TonyCore
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    let environment: Environment = TonyEnvironment()
     var window: UIWindow?
 
     func scene(
@@ -27,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
-        let vc = SplashViewBuilder.build(environment: TonyEnvironment())
+        let vc = environment.resolve(ViewDescriptor.SplashDescriptor())
         window.rootViewController = vc
     }
 

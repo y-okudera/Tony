@@ -7,7 +7,7 @@
 //
 
 import SandboxCore
-import SearchRepoFeatures
+import TonyCore
 import UIKit
 
 class SandboxSceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -22,7 +22,7 @@ class SandboxSceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        let rootViewController = SearchRepoViewBuilder.build(with: .init(initialSearchQuery: ""), environment: environment)
+        let rootViewController = environment.resolve(ViewDescriptor.SearchRepoDescriptor(initialSearchQuery: ""))
         window.rootViewController = UINavigationController(rootViewController: rootViewController)
     }
 }
